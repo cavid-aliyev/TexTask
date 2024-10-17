@@ -1,0 +1,80 @@
+.promo {
+  margin-bottom: 56px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media(min-width: 768px) {
+      gap: 16px;
+    }
+
+    .promo__title {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 24px;
+      color: #FFF;
+      text-align: left;
+    }
+
+    .promo-form {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+
+      &__label {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.5);
+        @media (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        @media (min-width: 768px) {
+          flex-direction: row;
+          max-width: 662px;
+          gap: 24px;
+        }
+
+        &-input {
+          width: 100%;
+          position: relative;
+
+          .promo-form__message {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+          }
+
+          .promo-form__input {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: $payment-option;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            @media(min-width: 768px) {
+              font-size: 16px;
+              padding: 10px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

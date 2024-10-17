@@ -1,0 +1,143 @@
+.logo {
+  width: 25px;
+  height: 42px;
+  @media (min-width: 768px) {
+    width: 34px;
+    height: 42px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+  background-color: $primary-color;
+  padding: 14px 0;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.72);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 64px;
+
+  @media(min-width: 768px) {
+    height: 84px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    .header__left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      .aside-btn {
+        height: 30px;
+        margin-top: 4px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        @media(min-width: 768px) {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      &__list {
+        display: none;
+        @media(min-width: 768px) {
+          display: flex;
+          gap: 24px;
+          margin-top: 8px;
+          align-items: center;
+        }
+      }
+
+      .balance {
+        display: flex;
+        height: 36px;
+        width: 100%;
+        max-width: 163px;
+
+        &__info {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          background-color: $nav-btn;
+          padding: 0 12px;
+
+          .balance__amount {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 800;
+            color: #F6F7FA;
+            margin-right: 7px;
+          }
+
+          .balance__percent {
+            font-size: 8px;
+            font-weight: 900;
+            padding: 3px 2px;
+            background-color: $secondary-color;
+            color: white;
+            border-radius: 3px;
+            margin-right: 5px;
+          }
+
+          .balance__dropdown-btn {
+            height: 16px;
+          }
+        }
+
+        &__add {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          display: flex;
+          align-items: center;
+          background-color: $secondary-color;
+          padding: 10px;
+          cursor: pointer;
+
+          .balance__add-icon {
+            height: 16px;
+          }
+        }
+      }
+
+      .user-pfp {
+        max-width: 52px;
+        height: 52px;
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid #C68CFF;
+        box-shadow: 0 1px 17px 0 rgba(72, 0, 224, 0.23);
+        overflow: hidden;
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

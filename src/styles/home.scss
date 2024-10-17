@@ -1,0 +1,7 @@
+.main {
+  background-color: $primary-color;
+  padding-top: 88px;
+  @media(min-width: 768px) {
+    padding: 116px 0 32px;
+  }
+}
